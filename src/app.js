@@ -20,16 +20,37 @@ const dominios = () => {
         console.log('for: ' + pronoun[pronounIndex] + adj[adjIndex] + noun[nounIndex] + '.com')
       }
     }
-  } 
+  }
 }
-dominios()
+//dominios()
 
 const dominioseach = () => {
   let pronoun = ['the', 'our'];
   let adj = ['great', 'big'];
   let noun = ['jogger', 'racoon'];
-  pronoun.forEach ((Element1) => {adj.forEach ((Element2) => {noun.forEach ((Element3) =>{
-    console.log('ForEach: ' + Element1 + Element2 + Element3 + '.com')
-   })})})
+  pronoun.forEach((Element1) => {
+    adj.forEach((Element2) => {
+      noun.forEach((Element3) => {
+        console.log('ForEach: ' + Element1 + Element2 + Element3 + '.com')
+      })
+    })
+  })
 }
-dominioseach ()
+//dominioseach ()
+
+
+const contarLetras = (str) => {
+  const dividirStr = str.split('');
+  const sumaLetra = {};
+  dividirStr.forEach((letra) => {
+    if (sumaLetra[letra] === undefined){
+        sumaLetra[letra] = 1;
+        return;
+    }
+    sumaLetra[letra] = sumaLetra[letra] + 1;
+  }); 
+    return sumaLetra;
+  
+};
+
+console.log(contarLetras('abcedaaadd')); 
